@@ -1,10 +1,13 @@
 # Time-Series-Forecasting
 
-Autoregressive (AR) Models:
+#### Autoregressive (AR) Models:
 Often you an forecast a series based solely o the past values (Yt). Called long-memroy models.
 ###### AR(p) model:
 Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p
-
+#### Moving Average (MA) Models:
+You can also forecast a series based solely on the past error values (et). Called short-memory models.
+##### MA(q) model:
+Yt = a0 + et - b1et-1 - b2et-2 - ... -bqet-q
 
 
 
