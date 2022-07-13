@@ -8,3 +8,12 @@ p: The order of the auto-regressive (AR) model (i.e., the number of lag observat
 d: The degree of differencing.
 q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
 An MA process is a linear combination of past errors
+
+ Auto-correlation: 
+ The ACF can be used to identify trends in data and the influence of previously observed values on a current observation
+ Sharp peaks indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
+ lag: We can calculate the correlation for current time-series observations with observations of previous time steps called lags and
+ after lag q, the auto-correlation is not significant anymore. In other words, instead of calculating the correlation between two different series,
+ we calculate the correlation of the series with an “x” unit lagged version (x∈N) of itself. It is also known as lagged correlation
+ or serial correlation. The value of auto-correlation varies between +1 & -1. If the auto-correlation of series is a very small value
+ that does not mean, there is no correlation.
