@@ -3,7 +3,7 @@
 Autoregressive (AR) Models:
 Often you an forecast a series based solely o the past values.
 ##### AR(p) model:
-Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p
+Yt = a_0 + a1Yt-1 + a2Yt-2 + ... + apYt-p
 
 
 Auto-Regressive Integrated Moving Averages (ARIMA):
