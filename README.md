@@ -48,3 +48,5 @@ LSTM is an artificial recurrent neural network (RNN) architecture used in the fi
 * 3. Fit network
 * 4. Evaluate network
 * 5. Make predictions
+
+LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
