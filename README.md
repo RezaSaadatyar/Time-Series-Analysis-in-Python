@@ -3,11 +3,15 @@
 #### Autoregressive (AR) Models:
 Often you an forecast a series based solely o the past values (Yt). Called long-memroy models.
 ###### AR(p) model:
-Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p
+Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et
 #### Moving Average (MA) Models:
 You can also forecast a series based solely on the past error values (et). Called short-memory models.
 ##### MA(q) model:
-Yt = a0 + et - b1et-1 - b2et-2 - ... - bqet-q
+Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q
+#### ARMA(p,q) model:
+* p is order of AR part
+* q is order of MA part
+ARMA(1,1): Yt = a1yt-1 + b1et-1 + et
 
 Auto-Regressive Integrated Moving Averages (ARIMA):
 In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA model is useful in the cases where the time series is non-stationary. ARIMA is used to help reduce the number of parameters needed for good estimation in the model.
