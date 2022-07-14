@@ -12,7 +12,7 @@ Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q
 * p is order of AR part
 * q is order of MA part
 * ARMA(1,1): Yt = a1yt-1 + b1et-1 + et
-Examole: 
+####### Example: 
 yt = 0.5yt-1 + 0.2et-1 + et
 *ar
 Auto-Regressive Integrated Moving Averages (ARIMA):
