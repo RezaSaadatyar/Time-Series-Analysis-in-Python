@@ -25,7 +25,7 @@ d: The degree of differencing.
 q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
 An MA process is a linear combination of past errors
 
- Auto-correlation: 
+ ##### Auto-correlation: 
  The ACF can be used to identify trends in data and the influence of previously observed values on a current observation
  Sharp peaks indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
  lag: We can calculate the correlation for current time-series observations with observations of previous time steps called lags and
@@ -38,4 +38,7 @@ An MA process is a linear combination of past errors
 #### Long short-term memory (LSTM): 
 LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
  ###### Problems of traditional regression based forecasting models:
- 
+ Do not support
+ * 1. noise, missing data or outliers.
+ * 2. non-linear relationship.
+ * 3. multiple fileds to influnce the predictions.
