@@ -42,9 +42,9 @@ LSTM is an artificial recurrent neural network (RNN) architecture used in the fi
  * 1. noise, missing data or outliers.
  * 2. non-linear relationship.
  * 3. multiple fileds to influnce the predictions.
-##### LSTM life-cycle in keras
+##### LSTM life-cycle in keras:
 * 1. Define network
-* 2.compile network
+* 2. compile network
 * 3. Fit network
 * 4. Evaluate network
 * 5. Make predictions
