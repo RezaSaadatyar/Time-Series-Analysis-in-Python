@@ -1,5 +1,5 @@
 # Time-Series-Forecasting
-
+1) Plot the time-series. 2)Check the stationary. 3)Determine the parameter p or order of the AR model. 4)Train the model.
 #### Autoregressive (AR) Models:
 Often you an forecast a series based solely o the past values (Yt). Called long-memroy models.
 ###### AR(p) model:
@@ -50,3 +50,6 @@ LSTM is an artificial recurrent neural network (RNN) architecture used in the fi
 * 5. Make predictions
 
 LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
+
+##### Vanilla LSTM:
+A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction
