@@ -12,7 +12,9 @@ Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q
 * p is order of AR part
 * q is order of MA part
 * ARMA(1,1): Yt = a1yt-1 + b1et-1 + et
-
+Examole: 
+yt = 0.5yt-1 + 0.2et-1 + et
+*ar
 Auto-Regressive Integrated Moving Averages (ARIMA):
 In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA model is useful in the cases where the time series is non-stationary. ARIMA is used to help reduce the number of parameters needed for good estimation in the model.
   
