@@ -37,3 +37,5 @@ An MA process is a linear combination of past errors
 
 #### Long short-term memory (LSTM): 
 LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
+ ###### Problems of traditional regression based forecasting models:
+ 
