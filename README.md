@@ -52,3 +52,4 @@ A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, an
 Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
 #### Bidirectional LSTM:
 On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations. 
+#### Encoder-Decoder model:
