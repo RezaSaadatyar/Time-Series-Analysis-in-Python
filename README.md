@@ -50,4 +50,5 @@ LSTMs are sensitive to the scale of the input data, specifically when the sigmoi
 A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
 #### Stacked LSTM:
 Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
-
+#### Bidirectional LSTM:
+On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations. 
