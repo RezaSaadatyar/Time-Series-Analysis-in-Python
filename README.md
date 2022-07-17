@@ -48,4 +48,6 @@ LSTMs are sensitive to the scale of the input data, specifically when the sigmoi
 
 ##### Vanilla LSTM:
 A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
+#### Stacked LSTM:
+Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
 
