@@ -46,7 +46,7 @@ LSTM is an artificial recurrent neural network (RNN) architecture used in the fi
 
 LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
 
-We annot use random way of splitting dataset into train and test as the sequence of events is important for time series. So we take first 70% vaues for train and the remaining 30% for test.
+We cannot use random way of splitting dataset into train and test as the sequence of events is important for time series. So we take first 70% values for train and the remaining 30% for test.
 ##### Vanilla LSTM:
 A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
 #### Stacked LSTM:
