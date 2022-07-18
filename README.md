@@ -1,4 +1,10 @@
-
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 
 # Time-Series-Forecasting
 1) Plot the time-series. 2)Check the stationary. 3)Determine the parameter p or order of the AR model. 4)Train the model.
