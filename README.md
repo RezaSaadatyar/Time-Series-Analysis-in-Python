@@ -2,10 +2,13 @@
 # Time-Series-Forecasting
 1) Plot the time-series. 2)Check the stationary. 3)Determine the parameter p or order of the AR model. 4)Train the model.
 ```
+
+```diff
 #### Autoregressive (AR) Models:
 Often you an forecast a series based solely o the past values (Yt). Called long-memroy models.
 ###### AR(p) model:
 Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et
+```
 #### Moving Average (MA) Models:
 You can also forecast a series based solely on the past error values (et). Called short-memory models.
 ##### MA(q) model:
