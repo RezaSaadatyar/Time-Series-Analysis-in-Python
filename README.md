@@ -54,3 +54,7 @@ Multiple hidden LSTM layers can be stacked one on top of another in what is refe
 #### Bidirectional LSTM:
 On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations. 
 #### Encoder-Decoder model:
+
+
+
+
