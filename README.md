@@ -49,10 +49,13 @@ LSTMs are sensitive to the scale of the input data, specifically when the sigmoi
 We cannot use random way of splitting dataset into train and test as the sequence of events is important for time series. So we take first 70% values for train and the remaining 30% for test.
 ##### Vanilla LSTM:
 A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
+
 #### Stacked LSTM:
 Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
+
 #### Bidirectional LSTM:
 On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations. 
+
 #### Encoder-Decoder model:
 
 
