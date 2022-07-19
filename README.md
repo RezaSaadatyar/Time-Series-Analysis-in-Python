@@ -48,6 +48,10 @@ Auto-correlation:
  * PACF: We can find out the required number of AR terms by inspecting the Partial Autocoreelation plot. The PACF represents the correlation
  between the series and its lags. 
 ```
+```diff
+Multilayer Perceptron (MLP):
+MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
+```
 #### Long short-term memory (LSTM): 
 LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
  ###### Problems of traditional regression based forecasting models:
