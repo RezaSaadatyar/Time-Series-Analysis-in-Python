@@ -7,43 +7,36 @@
 > **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
 time series values in the future
 
-Y~t
-
-
-
-Autoregressive integrated moving average ( ARIMA ) model is the
-advanced form of AR model, which includes the dependency between an
-observation and a residual error from a moving average model applied to
-lagged observations.
-
-Seasonal autoregressive integrated moving average ( SARIMA ) is an
-extension of the ARIMA model that also includes the impact of seasonality.
-This is one of the most advanced models from statistics and random process
-theory. It combines the ARIMA model with the seasonally adjusted
-predictions.
-
-
 
 > **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
-- Autoregression 
+- Autoregressive (AR) Model
+  - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
+  -  AR(p) model: $Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et$
+- Auto-Regressive Integrated Moving Averages (ARIMA):
+   - In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of
+parameters needed for good estimation in the model.
+   - ARIMA(p,d,q):
+     - p: The order of the auto-regressive (AR) model (i.e., the number of lag observations). 
+     - d: The degree of differencing.
+     - q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
+- Seasonal autoregressive integrated moving average (SARIMA) moddel
+   - is an extension of the ARIMA model that also includes the impact of seasonality. It combines the ARIMA model with the seasonally adjusted predictions.
+- Holt-Winters exponential smoothing (HWES):
+   - HWES is a way to model three aspects of the time series: an average of a typical value, a trend, and a seasonality. HWES uses exponential smoothing to remember lots of data from the past and predict future values. So this method is suitable for time series with trend and seasonal components.
+
+An MA process is a linear combination of past errors
 - Moving Average 
 - Autoregressive Moving Average 
 - Autoregressive Integrated Moving Average
 
-```
-```diff
-Time-Series-Forecasting
-1) Plot the time-series. 2)Check the stationary. 3)Determine the parameter p or order of the AR model. 4)Train the model.
-```
+Linear methods like ARIMA, SARIMA, HWES are popular classical techniques for time series forecasting. But these traditional approaches also have some constraints:
+ - Focus on linear relationships and inability to find complex nonlinear ones
+Fixed lag observations and incapacity to make feature pre-processing
+Missing data are not supported
+Working with univariate time series only, but common real-world problems have multiple input variables
+One-step predictions: many real-world problems require predictions with a long time horizon
 
 
-Autoregressive (AR) Models:
-The notation AR(p) means that the autoregressive model uses p history lag to make a prediction
-AR(p) model:
-
-- Y~t
-
-Yt = a~0 + a~1Y~t-1 + a~2Y~t-2 + ... + a~pY~t-p + e~t
 
 
 Moving Average (MA) Models:
@@ -60,18 +53,16 @@ Example:
 yt = 0.5yt-1 + 0.2et-1 + et
 * ar_coefs = [1, -0.5]
 * ma_coefs = [1, 0.2]
-Auto-Regressive Integrated Moving Averages (ARIMA):
-In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of 
-mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive 
-time series. ARIMA model is useful in the cases where the time series is non-stationary. ARIMA is used to help reduce the number of
-parameters needed for good estimation in the model.
-  
-ARIMA(p,d,q):
-p: The order of the auto-regressive (AR) model (i.e., the number of lag observations). 
-d: The degree of differencing.
-q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
-An MA process is a linear combination of past errors
+
 ```
+
+
+
+
+
+
+
+
 ```diff 
 Auto-correlation: 
  * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
