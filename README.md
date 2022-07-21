@@ -11,7 +11,16 @@ Y~t
 
 
 
+Autoregressive integrated moving average ( ARIMA ) model is the
+advanced form of AR model, which includes the dependency between an
+observation and a residual error from a moving average model applied to
+lagged observations.
 
+Seasonal autoregressive integrated moving average ( SARIMA ) is an
+extension of the ARIMA model that also includes the impact of seasonality.
+This is one of the most advanced models from statistics and random process
+theory. It combines the ARIMA model with the seasonally adjusted
+predictions.
 
 
 
