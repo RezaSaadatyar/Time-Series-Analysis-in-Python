@@ -1,20 +1,47 @@
+### Time Series Analysis and Forecasting:
+> The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
+  As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc.
+>
+> **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
+>
+> **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
+time series values in the future
+
+Y~t
+
+
+
+
+
+
+
+> **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
+- Autoregression 
+- Moving Average 
+- Autoregressive Moving Average 
+- Autoregressive Integrated Moving Average
+
+```
 ```diff
 Time-Series-Forecasting
 1) Plot the time-series. 2)Check the stationary. 3)Determine the parameter p or order of the AR model. 4)Train the model.
 ```
 
-```diff
+
 Autoregressive (AR) Models:
-Often you an forecast a series based solely o the past values (Yt). Called long-memroy models.
+The notation AR(p) means that the autoregressive model uses p history lag to make a prediction
 AR(p) model:
-Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et
-```
-```diff 
+
+- Y~t
+
+Yt = a~0 + a~1Y~t-1 + a~2Y~t-2 + ... + a~pY~t-p + e~t
+
+
 Moving Average (MA) Models:
 You can also forecast a series based solely on the past error values (et). Called short-memory models.
 MA(q) model:
 Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q
-```
+
 ```diff 
 ARMA(p,q) model:
 * p is order of AR part
