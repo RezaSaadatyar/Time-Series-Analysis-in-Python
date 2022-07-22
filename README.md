@@ -77,7 +77,7 @@ yt = 0.5yt-1 + 0.2et-1 + et
 
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
-```
+
 > #### Long short-term memory (LSTM): 
    LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
 > ###### Problems of traditional regression based forecasting models:
