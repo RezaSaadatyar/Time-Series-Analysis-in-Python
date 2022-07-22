@@ -10,8 +10,8 @@ time series values in the future
 
 > **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
 > - Autoregressive (AR) Model
->  - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
->  -  AR(p) model: $Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et$
+>   - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
+>   - AR(p) model: $Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et$
 > - Auto-Regressive Integrated Moving Averages (ARIMA):
 >   - In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of
 parameters needed for good estimation in the model.
