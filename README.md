@@ -78,14 +78,14 @@ Auto-correlation:
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
 ```
-#### Long short-term memory (LSTM): 
-LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
- ###### Problems of traditional regression based forecasting models:
+> #### Long short-term memory (LSTM): 
+   LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
+ > ###### Problems of traditional regression based forecasting models:
  Do not support
  * 1. noise, missing data or outliers.
  * 2. non-linear relationship.
  * 3. multiple fileds to influnce the predictions.
-##### LSTM life-cycle in keras:
+> ##### LSTM life-cycle in keras:
 * 1. Define network
 * 2. compile network
 * 3. Fit network
