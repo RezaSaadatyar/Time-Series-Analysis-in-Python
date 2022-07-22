@@ -64,14 +64,14 @@ yt = 0.5yt-1 + 0.2et-1 + et
 
 
 > Auto-correlation: 
-   * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
+>   * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
  indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
-   * lag: We can calculate the correlation for current time-series observations with observations of previous time steps called lags and
+>   * lag: We can calculate the correlation for current time-series observations with observations of previous time steps called lags and
  after lag q, the auto-correlation is not significant anymore. In other words, instead of calculating the correlation between two different
  series, we calculate the correlation of the series with an “x” unit lagged version (x∈N) of itself. It is also known as lagged correlation
  or serial correlation. The value of auto-correlation varies between +1 & -1. If the auto-correlation of series is a very small value that
  does not mean, there is no correlation.
-   * PACF: We can find out the required number of AR terms by inspecting the Partial Autocoreelation plot. The PACF represents the correlation
+ >  * PACF: We can find out the required number of AR terms by inspecting the Partial Autocoreelation plot. The PACF represents the correlation
  between the series and its lags. 
 
 
@@ -80,7 +80,7 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
 ```
 > #### Long short-term memory (LSTM): 
    LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
- > ###### Problems of traditional regression based forecasting models:
+> ###### Problems of traditional regression based forecasting models:
  Do not support
  * 1. noise, missing data or outliers.
  * 2. non-linear relationship.
