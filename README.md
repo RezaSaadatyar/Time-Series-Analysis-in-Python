@@ -21,6 +21,7 @@ parameters needed for good estimation in the model.
      - q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
 > - Seasonal autoregressive integrated moving average (SARIMA) moddel
    - is an extension of the ARIMA model that also includes the impact of seasonality. It combines the ARIMA model with the seasonally adjusted predictions.
+   
 > - Holt-Winters exponential smoothing (HWES):
    - HWES is a way to model three aspects of the time series: an average of a typical value, a trend, and a seasonality. HWES uses exponential smoothing to remember lots of data from the past and predict future values. So this method is suitable for time series with trend and seasonal components.
 
