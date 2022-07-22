@@ -82,15 +82,15 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
    LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
 > ###### Problems of traditional regression based forecasting models:
  Do not support
- * 1. noise, missing data or outliers.
- * 2. non-linear relationship.
- * 3. multiple fileds to influnce the predictions.
+   * 1. noise, missing data or outliers.
+   * 2. non-linear relationship.
+   * 3. multiple fileds to influnce the predictions.
 > ##### LSTM life-cycle in keras:
-* 1. Define network
-* 2. compile network
-* 3. Fit network
-* 4. Evaluate network
-* 5. Make predictions
+  * 1. Define network
+  * 2. compile network
+  * 3. Fit network
+  * 4. Evaluate network
+  * 5. Make predictions
 
 LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
 
