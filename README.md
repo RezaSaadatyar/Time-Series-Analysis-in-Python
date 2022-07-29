@@ -106,6 +106,9 @@ On some sequence prediction problem, it can be benenficial to allow the LSTM mod
 
 #### Encoder-Decoder model:
 
-
-
+> **Data preprocessing**
+> - Data scaling
+> - Train-test split
+> - Create sequences
+> - Build a model
 
