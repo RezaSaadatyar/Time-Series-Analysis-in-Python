@@ -1,3 +1,8 @@
+**$y_{t-1} = (L_t + b_t) * S_{t+1-m}$**
+
+**$ L_t = a*\frac{{y_t}{S_{t-m}}$**
+
+
 ### Time Series Analysis and Forecasting:
 > The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
   As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc.
@@ -56,7 +61,8 @@ yt = 0.5yt-1 + 0.2et-1 + et
 ```
 
 
-
+> ***Holt Winter Multiplicative method***
+>  
 
 
 
@@ -78,8 +84,8 @@ yt = 0.5yt-1 + 0.2et-1 + et
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
 
-> #### Long short-term memory (LSTM): 
-   LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
+> ***Long short-term memory (LSTM):***<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
+>   - LSTM Autoenooder 
 > ###### Problems of traditional regression based forecasting models:
  Do not support
    * 1. noise, missing data or outliers.
