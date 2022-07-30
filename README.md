@@ -62,9 +62,9 @@ yt = 0.5yt-1 + 0.2et-1 + et
 
 > **Problems of traditional regression based forecasting models:**<br/>
 > Do not support<br/>
->  * 1. noise, missing data or outliers.
->  * 2. non-linear relationship.
->  * 3. multiple fileds to influnce the predictions.
+> * 1. noise, missing data or outliers.
+> * 2. non-linear relationship.
+> * 3. multiple fileds to influnce the predictions.
 
 
 > ***Holt Winter Multiplicative method***
