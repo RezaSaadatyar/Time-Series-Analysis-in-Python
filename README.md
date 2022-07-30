@@ -43,7 +43,7 @@ Working with univariate time series only, but common real-world problems have mu
 One-step predictions: many real-world problems require predictions with a long time horizon
 
 
-Moving Average (MA) Models:
+> Moving Average (MA) Models<br/>
 You can also forecast a series based solely on the past error values (et). Called short-memory models.
 MA(q) model:
 $Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q$
