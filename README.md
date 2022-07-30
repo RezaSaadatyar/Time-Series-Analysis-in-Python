@@ -88,12 +88,14 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
 >   - LSTM Autoenooder 
 >   - Vanilla LSTM<br/> A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
 >   - Stacked LSTM<br/> Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
->   - Bidirectional LSTM<br/> On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations.<br/>***LSTM life-cycle in keras:***
->  * 1. Define network
->  * 2. compile network
->  * 3. Fit network
->  * 4. Evaluate network
->  * 5. Make predictions
+>   - Bidirectional LSTM<br/> On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations.
+>
+> **LSTM life-cycle in keras:**
+> * 1. Define network
+> * 2. compile network
+> * 3. Fit network
+> * 4. Evaluate network
+> * 5. Make predictions
 > ###### Problems of traditional regression based forecasting models:
  Do not support
    * 1. noise, missing data or outliers.
