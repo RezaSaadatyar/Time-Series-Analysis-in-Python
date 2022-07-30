@@ -84,8 +84,11 @@ yt = 0.5yt-1 + 0.2et-1 + et
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
 
-> ***Long short-term memory (LSTM):***<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections.
+> ***Long short-term memory (LSTM):***<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
 >   - LSTM Autoenooder 
+>   - Vanilla LSTM:<br/> A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
+>   - Stacked LSTM:<br/> Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
+>   - Bidirectional LSTM<br/> On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations. 
 > ###### Problems of traditional regression based forecasting models:
  Do not support
    * 1. noise, missing data or outliers.
@@ -98,17 +101,10 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
   * 4. Evaluate network
   * 5. Make predictions
 
-LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
+
 
 We cannot use random way of splitting dataset into train and test as the sequence of events is important for time series. So we take first 70% values for train and the remaining 30% for test.
-##### Vanilla LSTM:
-A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
 
-#### Stacked LSTM:
-Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
-
-#### Bidirectional LSTM:
-On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations. 
 
 #### Encoder-Decoder model:
 
