@@ -68,8 +68,6 @@ yt = 0.5yt-1 + 0.2et-1 + et
 >  
 
 
-
-
 > Auto-correlation: 
 >   * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
  indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
@@ -80,7 +78,6 @@ yt = 0.5yt-1 + 0.2et-1 + et
  does not mean, there is no correlation.
  >  * PACF: We can find out the required number of AR terms by inspecting the Partial Autocoreelation plot. The PACF represents the correlation
  between the series and its lags. 
-
 
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
@@ -97,11 +94,6 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
 > * 3. Fit network
 > * 4. Evaluate network
 > * 5. Make predictions
-
-
-
-
-
 
 
 #### Encoder-Decoder model:
