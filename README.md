@@ -2,7 +2,6 @@
 
 **$ L_t = a*\frac{{y_t}{S_{t-m}}$**
 
-
 ### Time Series Analysis and Forecasting:
 > The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
   As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc.
@@ -66,8 +65,6 @@ yt = 0.5yt-1 + 0.2et-1 + et
 
 > ***Holt Winter Multiplicative method***
 >  
-
-
 > Auto-correlation: 
 >   * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
  indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
