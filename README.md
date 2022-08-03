@@ -12,7 +12,6 @@
 > **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
 time series values in the future
 
-
 > **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
 > - Autoregressive (AR) Model
 >   - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
@@ -42,7 +41,6 @@ Missing data are not supported
 Working with univariate time series only, but common real-world problems have multiple input variables
 One-step predictions: many real-world problems require predictions with a long time horizon
 
-
 > Moving Average (MA) Models<br/>
 You can also forecast a series based solely on the past error values (et). Called short-memory models.
 MA(q) model:
@@ -59,7 +57,6 @@ yt = 0.5yt-1 + 0.2et-1 + et
 * ma_coefs = [1, 0.2]
 
 ```
-
 > **Problems of traditional regression based forecasting models:**<br/>
 > Do not support<br/>
 > * 1. noise, missing data or outliers.
@@ -69,8 +66,6 @@ yt = 0.5yt-1 + 0.2et-1 + et
 
 > ***Holt Winter Multiplicative method***
 >  
-
-
 
 
 
