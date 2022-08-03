@@ -1,6 +1,5 @@
 **$y_{t-1} = (L_t + b_t) * S_{t+1-m}$**
 
-**$ L_t = a*\frac{{y_t}{S_{t-m}}$**
 
 ### Time Series Analysis and Forecasting:
 > The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
@@ -62,7 +61,6 @@ yt = 0.5yt-1 + 0.2et-1 + et
 > * 2. non-linear relationship.
 > * 3. multiple fileds to influnce the predictions.
 
-
 > ***Holt Winter Multiplicative method***
 >  
 > Auto-correlation: 
@@ -91,7 +89,6 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
 > * 3. Fit network
 > * 4. Evaluate network
 > * 5. Make predictions
-
 
 #### Encoder-Decoder model:
 
