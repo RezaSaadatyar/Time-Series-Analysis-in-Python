@@ -1,15 +1,17 @@
-**$y_{t-1} = (L_t + b_t) * S_{t+1-m}$**
+**Time Series Analysis and Forecasting:**
+---
+The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
 
+ **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
 
-### Time Series Analysis and Forecasting:
-> The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
-  As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc.
->
-> **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
->
-> **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
+ **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
 time series values in the future
 
+---
+>**Linear Regression Models**<br/>
+>  - [x] ***Linear Correlation:***<br/>
+> For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
+>  - [x] ***Linear Regression:***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables.<br/> 
 > **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
 > - Autoregressive (AR) Model
 >   - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
@@ -62,7 +64,7 @@ yt = 0.5yt-1 + 0.2et-1 + et
 > * 3. multiple fileds to influnce the predictions.
 
 > ***Holt Winter Multiplicative method***
->  
+>  **$y_{t-1} = (L_t + b_t) * S_{t+1-m}$**
 > Auto-correlation: 
 >   * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
  indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
