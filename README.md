@@ -11,9 +11,9 @@ time series values in the future
 >**Linear Regression Models**<br/>
 >  - [x] ***Linear Correlation:***<br/>
 > For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
->  - [x] ***Linear Regression:***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables.<br/> 
+>  - [x] ***Linear Regression:***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. **$y_{t} = a_{0}+ x_{t} + e_{t}$**<br/>
 > **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
-> - Autoregressive (AR) Model
+> - Autoregressive (AR) Model.
 >   - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
 >   - AR(p) model: $Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et$
 > - Auto-Regressive Integrated Moving Averages (ARIMA):
@@ -75,10 +75,10 @@ yt = 0.5yt-1 + 0.2et-1 + et
  does not mean, there is no correlation.
  >  * PACF: We can find out the required number of AR terms by inspecting the Partial Autocoreelation plot. The PACF represents the correlation
  between the series and its lags. 
-
+** machine learning for forecasting**
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
-
+** Forecasting with machine learning**
 > **Long short-term memory (LSTM):**<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
 >   - LSTM Autoenooder 
 >   - Vanilla LSTM<br/> A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
