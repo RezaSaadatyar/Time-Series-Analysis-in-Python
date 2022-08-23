@@ -8,7 +8,8 @@ The term time series refers to a series of observations that depend on time. Tim
 time series values in the future
 
 ---
->- [ ] **`Linear Regression Models`**<br/>
+
+>![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
 >  - [x] ***Linear Correlation:***<br/>
 > For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
 >  - [x] ***Linear Regression:***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. **$y_{t} = a_{0}+ x_{t} + e_{t}$**<br/>
