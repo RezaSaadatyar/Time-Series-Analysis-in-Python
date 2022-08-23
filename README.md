@@ -99,4 +99,3 @@ MLP is a deep, artificial neural network connected to mutltiple layers in a dire
 > - Train-test split<br/> We cannot use random way of splitting dataset into train and test as the sequence of events is important for time series. So we take first 70% values for train and the remaining 30% for test.
 > - Create sequences
 > - Build a model
-
