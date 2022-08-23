@@ -6,6 +6,7 @@ The term time series refers to a series of observations that depend on time. Tim
 
  **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
 time series values in the future
+
 ---
 >- [ ] **`Linear Regression Models`**<br/>
 >  - [x] ***Linear Correlation:***<br/>
