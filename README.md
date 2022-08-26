@@ -1,3 +1,6 @@
+
+
+
 **Time Series Analysis and Forecasting:**
 ---
 The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
@@ -8,6 +11,12 @@ The term time series refers to a series of observations that depend on time. Tim
 time series values in the future
 
 ---
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)  **Linear Regression Models**<br/>
+![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)  **Linear Regression Models**<br/>
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)  **Linear Regression Models**<br/>
+
+
+
 
 >![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
 >  - [x] ***Linear Correlation:***<br/>
