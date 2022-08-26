@@ -1,8 +1,5 @@
+### $$\textcolor{blue}{\text{Time Series Analysis and Forecasting}}$$
 
-
-
-**Time Series Analysis and Forecasting:**
----
 The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
 
  **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
