@@ -13,8 +13,6 @@ time series values in the future
 ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)  **Linear Regression Models**<br/>
 
 
-
-
 >![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
 >  - [x] ***Linear Correlation:***<br/>
 > For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
