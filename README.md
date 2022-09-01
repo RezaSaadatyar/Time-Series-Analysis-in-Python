@@ -26,13 +26,12 @@ time series values in the future
 - ***Missing values*** can be filled by interpolating between two closest non-missing values or by using different Python functions (e.g., interpolate()) to fill NAN values in the DataFrame or series. 
 - ***Normalization*** can be useful, and even required in some machine learning algorithms, when your time series data has input values and features with differing measurements and dimensions. For machine learning algorithms, such as *k-nearest neighbors*, which use distance estimates, *linear regression, and neural networks* that process a weight calibration on input values, normalization is necessary. 
 - In ***standardizing*** a data set, the distribution of observed values is rescaled to have a mean of 0 and a standard deviation of 1. Standardization assumes that your observations fit a Gaussian distribution with a well-behaved mean and standard deviation. Algorithms like support vector machines and linear and logistic regression and other algorithms have improved performance with Gaussian data.
-- ***Check Stationary Time Series:*** mean, and variance is constant over periods, and auto-covariance does not depend on time. plot the moving average/variance (Rolling statistics) and see if it varies with time. Augmented Dickey-Fuller Test: When the test statistic (p-value) is lower than the critical value shown, the time series is stationary.
-
+- ***Check Stationary Time Series:*** Mean, and variance is constant over periods, and auto-covariance does not depend on time. Plot the moving average/variance (Rolling window statistics) and see if it varies with time. Augmented Dickey-Fuller Test: When the test statistic (p-value) is lower than the critical value shown, the time series is stationary.
 ----
 
 
 :three:**Lag feature**
-These are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results.
+These are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results. The operation of adding lag features is called the sliding window method or Window Features
 
 ---
 :four:**An explanation of data set splits**
