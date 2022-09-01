@@ -39,34 +39,46 @@ These are time-shifted values of the actual demand. For example, lag 1 features 
 - ***Validation data set:*** Validation data sets provide an unbiased evaluation of model fit on train data sets while tuning model hyperparameters.
 - ***Test data set:*** A test data set is used to identify whether a model is underfitting (the model performs poorly on the train data set) or overfitting (the model performs well on the train data set but fails to perform well on the test data set). It is determined by looking at the prediction error on both train and test data sets. The test data set is only used after the train and validation data sets have been used to train and validate the model.<br/>
 ![image](https://user-images.githubusercontent.com/96347878/187898924-6b434403-bac1-41d8-ac6f-4acd9053e511.png)
-
 ---
->![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
-> *The learning process is based on the following steps:*<br/> 
-> - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
-> - 2. Train a model using this data.<br/>
-> - 3. Test and deploy the model.<br/> 
-> - 4. Utilize the deployed model to automate predictive tasks.
+:five:**Linear Regression Models**<br/>
+    :small_blue_diamond: ***Linear Correlation***<br/>For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
+    :small_blue_diamond:  ***Linear Regression***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. **$y_{t} = a_{0}+ x_{t} + e_{t}$**<br/>
+:small_blue_diamond:***Moving Average (MA) Model***<br/>
+You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/>MA(q) model: $Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q$<br/>    
+    
+    
+:small_blue_diamond: ***Autoregressive (AR) Model***<br/>The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.<br/> AR(p) model: $Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et$<br/>
+:small_blue_diamond: ***Auto-Regressive Integrated Moving Averages (ARIMA) model***<br/>
+In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of
+parameters needed for good estimation in the model.<br/>
+***ARIMA(p,d,q):***<br/>
+   - p: The order of the auto-regressive (AR) model (i.e., the number of lag observations). 
+   - d: The degree of differencing.
+   - q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
 
 
 
 
 
->![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
->  - [x] ***Linear Correlation:***<br/>
-> For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
->  - [x] ***Linear Regression:***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. **$y_{t} = a_{0}+ x_{t} + e_{t}$**<br/>
+
+
+
+
+**Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
+*The learning process is based on the following steps:*<br/> 
+ - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
+ - 2. Train a model using this data.<br/>
+ - 3. Test and deploy the model.<br/> 
+ - 4. Utilize the deployed model to automate predictive tasks.
+
+
+
+
+
+
+> 
 > **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
-> - Autoregressive (AR) Model.
->   - The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future.
->   - AR(p) model: $Yt = a0 + a1Yt-1 + a2Yt-2 + ... + apYt-p + et$
-> - Auto-Regressive Integrated Moving Averages (ARIMA):
->   - In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of
-parameters needed for good estimation in the model.
->   - ARIMA(p,d,q):
-     - p: The order of the auto-regressive (AR) model (i.e., the number of lag observations). 
-     - d: The degree of differencing.
-     - q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
+> 
 > - Seasonal autoregressive integrated moving average (SARIMA) moddel
      - is an extension of the ARIMA model that also includes the impact of seasonality. It combines the ARIMA model with the seasonally adjusted predictions.
 > - Holt-Winters exponential smoothing (HWES):
@@ -84,10 +96,7 @@ Missing data are not supported
 Working with univariate time series only, but common real-world problems have multiple input variables
 One-step predictions: many real-world problems require predictions with a long time horizon
 
-> Moving Average (MA) Models<br/>
-You can also forecast a series based solely on the past error values (et). Called short-memory models.
-MA(q) model:
-$Yt = a0 + et + b1et-1 + b2et-2 + ... + bqet-q$
+
 
 ```diff 
 ARMA(p,q) model:
