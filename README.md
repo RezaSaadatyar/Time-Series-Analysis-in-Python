@@ -9,13 +9,17 @@ time series values in the future
 
 
 ---
-> **Machine Learning for Time Series Forecasting:**<br/> 
+>![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
 > *The learning process is based on the following steps:*<br/> 
 > - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
 > - 2. Train a model using this data.<br/>
 > - 3. Test and deploy the model.<br/> 
 > - 4. Utilize the deployed model to automate predictive tasks.
 
+
+
+**Lag feature**
+These are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results.
 
 >![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
 >  - [x] ***Linear Correlation:***<br/>
