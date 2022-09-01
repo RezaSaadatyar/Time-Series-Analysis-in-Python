@@ -22,7 +22,7 @@
 time series values in the future
 
 ---
-:two:Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model.
+:two:Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model. ***Missing values*** can be filled by interpolating between two closest non-missing values or by using different Python functions (e.g., interpolate()) to fill NAN values in the DataFrame or series. ***Normalization*** can be useful, and even required in some machine learning algorithms, when your time series data has input values and features with differing measurements and dimensions. For machine learning algorithms, such as *k-nearest neighbors*, which use distance estimates, *linear regression, and neural networks* that process a weight calibration on input values, normalization is necessary.
 
 
 
