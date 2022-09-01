@@ -25,6 +25,10 @@ time series values in the future
 :two:Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model.
 
 
+
+:three:**Lag feature**
+These are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results.
+
 ---
 :four:**An explanation of data set splits**
 - ***Train data set:*** A train data set represents the amount of data that machine learning models are fitted with.
@@ -42,8 +46,7 @@ time series values in the future
 
 
 
-**Lag feature**
-These are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results.
+
 
 >![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
 >  - [x] ***Linear Correlation:***<br/>
