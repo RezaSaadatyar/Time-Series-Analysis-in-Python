@@ -1,11 +1,26 @@
 ### $$\textcolor{blue}{\text{Time Series Analysis and Forecasting}}$$
 
+***This repository Covers:***
+- 1. A brief about types of Regression algorithms
+- 2. Preparing the data
+     - Normalize data (0-1)
+     - Check Stationary Time Series (p < 0.005)
+- 5. Find the lags
+- 6. Split Dataset intro Train and Test
+- 7. Training the model
+- 8. Prediction and performance check
+
+
 The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
 
  **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
 
  **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
 time series values in the future
+
+---
+
+:arrow_forward:The program will run automatically when you run **code/file Main.py**, and you do not need to run any of the other codes. Depending on your goal, you can execute all steps independently or interdependently within the code/file main. In addition, you can copy and run each section along with its related files in your own code or disable each section with a **#**. To run the program, the only thing you need is your input, which is **data and labels (Data = Your data, Labels = Your label/target)**.
 
 
 **An explanation of data set splits**
