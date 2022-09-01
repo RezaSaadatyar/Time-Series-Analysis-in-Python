@@ -9,9 +9,12 @@ time series values in the future
 
 
 ---
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)  **Linear Regression Models**<br/>
-![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)  **Linear Regression Models**<br/>
-![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+)  **Linear Regression Models**<br/>
+> **Machine Learning for Time Series Forecasting:**<br/> 
+> *The learning process is based on the following steps:*<br/> 
+> - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
+> - 2. Train a model using this data.<br/>
+> - 3. Test and deploy the model.<br/> 
+> - 4. Utilize the deployed model to automate predictive tasks.
 
 
 >![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png)  **Linear Regression Models**<br/>
