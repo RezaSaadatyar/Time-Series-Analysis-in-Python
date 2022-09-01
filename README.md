@@ -4,9 +4,9 @@
 - 1. A brief about types of Regression algorithms
 - 2. Preparing the data
      - Normalize data (0-1)
-     - Check Stationary Time Series (p < 0.005)
+     - Check stationary time series (p < 0.005)
 - 5. Find the lags
-- 6. Split Dataset intro Train and Test
+- 6. Split dataset intro train and test
 - 7. Training the model
 - 8. Prediction and performance check
 
@@ -26,8 +26,8 @@ time series values in the future
 **An explanation of data set splits**
 - ***Train data set:*** A train data set represents the amount of data that machine learning models are fitted with.
 - ***Validation data set:*** Validation data sets provide an unbiased evaluation of model fit on train data sets while tuning model hyperparameters.
-- ***Test data set:*** A test data set is used to identify whether a model is underfitting (the model performs poorly on the train data set) or overfitting (the model performs well on the train data set but fails to perform well on the test data set). It is determined by looking at the prediction error on both train and test data sets. The test data set is only used after the train and validation data sets have been used to train and validate the model.
-
+- ***Test data set:*** A test data set is used to identify whether a model is underfitting (the model performs poorly on the train data set) or overfitting (the model performs well on the train data set but fails to perform well on the test data set). It is determined by looking at the prediction error on both train and test data sets. The test data set is only used after the train and validation data sets have been used to train and validate the model.<br/>
+![image](https://user-images.githubusercontent.com/96347878/187898924-6b434403-bac1-41d8-ac6f-4acd9053e511.png)
 
 ---
 >![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
