@@ -14,7 +14,7 @@
 :arrow_forward:The program will run automatically when you run **code/file Main.py**, and you do not need to run any of the other codes. Depending on your goal, you can execute all steps independently or interdependently within the code/file main. In addition, you can copy and run each section along with its related files in your own code or disable each section with a **#**. To run the program, the only thing you need is your input, which is **data (data = Your data)**.
 
 ----
-The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
+:one:The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
 
  **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
 
@@ -22,11 +22,11 @@ The term time series refers to a series of observations that depend on time. Tim
 time series values in the future
 
 ---
+:two:Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model.
 
 
-
-
-**An explanation of data set splits**
+---
+:four:**An explanation of data set splits**
 - ***Train data set:*** A train data set represents the amount of data that machine learning models are fitted with.
 - ***Validation data set:*** Validation data sets provide an unbiased evaluation of model fit on train data sets while tuning model hyperparameters.
 - ***Test data set:*** A test data set is used to identify whether a model is underfitting (the model performs poorly on the train data set) or overfitting (the model performs well on the train data set but fails to perform well on the test data set). It is determined by looking at the prediction error on both train and test data sets. The test data set is only used after the train and validation data sets have been used to train and validate the model.<br/>
