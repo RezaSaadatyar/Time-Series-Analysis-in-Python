@@ -33,8 +33,9 @@ time series values in the future
 :three: **Lag features**<br/>
 They are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results. The operation of adding lag features is called the sliding window method or Window Features.
 
-***Autocorrelation*** describes the correlation between the output (that is, the target variable that we need to predict) and a specific lagged variable (that is, a group of values at a prior time stamp used as input). ***Autocorrelation plots*** are also often used to check randomness in time series. If the time series is random, autocorrelation values should be near zero for all time lags. If the time series is non-random, then one or more of the autocorrelations will be significantly non-zero.
-
+***Autocorrelation*** describes the correlation between the output (that is, the target variable that we need to predict) and a specific lagged variable (that is, a group of values at a prior time stamp used as input). ***Autocorrelation plot*** is also often used to check randomness in time series. If the time series is random, autocorrelation values should be near zero for all time lags. If the time series is non-random, then one or more of the autocorrelations will be significantly non-zero. The purpose of *the autocorrelation plot* is to show whether the data points in a time series are positively correlated, negatively correlated, or independent of one another. A plot of the autocorrelation of a time series by lag is also called the ***autocorrelation function (ACF)***.<br/>
+**ACF** is an autocorrelation function that provides information about the amount of autocorrelation in a series with its lagged values.<br/>
+**Partial autocorrelation (PACF)** is another important function that, instead of finding correlations of current values with lags such as ACF, finds a correlation of residues with the next lag.
 
 
 ---
