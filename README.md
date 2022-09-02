@@ -40,22 +40,22 @@ These are time-shifted values of the actual demand. For example, lag 1 features 
 - ***Test data set:*** A test data set is used to identify whether a model is underfitting (the model performs poorly on the train data set) or overfitting (the model performs well on the train data set but fails to perform well on the test data set). It is determined by looking at the prediction error on both train and test data sets. The test data set is only used after the train and validation data sets have been used to train and validate the model.<br/>
 ![image](https://user-images.githubusercontent.com/96347878/187898924-6b434403-bac1-41d8-ac6f-4acd9053e511.png)
 ---
-:five:**Linear Regression Models**<br/>
-:small_blue_diamond: ***Linear Correlation***<br/>For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.
+:five: **Autoregressive and Automated Methods for Time Series Forecasting**
+
+:orange_circle: **Linear Regression Models:**<br/>
+:small_orange_diamond: ***Linear Correlation:*** For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.
   
-:small_blue_diamond:  ***Linear Regression***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. **$y_{t} = a_{0} + x_{t} + e_{t}$**<br/>
+:small_orange_diamond: ***Linear Regression (LR):*** We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. ***LR:*** **$y_{t} = a_{0} + x_{t} + e_{t}$**
 
-:small_blue_diamond:***Least Squares Method***<br/>By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coeff = (X^{T}X)^{-1}X^{T}y$**<br/>
+:small_orange_diamond: ***Least Squares Method:*** By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coeff = (X^{T}X)^{-1}X^{T}y$**
 
-:small_blue_diamond:***Moving Average (MA) Model***<br/>You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/> ***MA(p) model:***  **$y_{t} = a_{0} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{p}e_{t-p}$** 
+:small_orange_diamond: ***Moving Average (MA) Model:*** You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/> ***MA(p) model:***  **$y_{t} = a_{0} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{p}e_{t-p}$** 
 
-:small_blue_diamond: ***Autoregressive (AR) Model***<br/>The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future. <br/>***AR(p) model:*** **$y_{t}  = a_{0} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t}$**<br/> 
+:small_orange_diamond: ***Autoregressive (AR) Model:*** The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future. <br/>***AR(p) model:*** **$y_{t}  = a_{0} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t}$**
 
-:small_blue_diamond: ***Autoregressive Exogenous (ARX) Model***<br/>The ARX model is a type of autoregressive model that includes an input term, unlike the AR model.<br/>***ARX(p, q) model:***  **$y_{t} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} = b_{1}x_{t} + b_{2}x_{t-1} + ... + b_{p}x_{t-p} + e_{t}$** <br/>
+:small_orange_diamond: ***Autoregressive Exogenous (ARX) Model:*** The ARX model is a type of autoregressive model that includes an input term, unlike the AR model.<br/>***ARX(p, q) model:***  **$y_{t} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} = b_{1}x_{t} + b_{2}x_{t-1} + ... + b_{p}x_{t-p} + e_{t}$** 
 
-:small_blue_diamond: ***Auto-Regressive Integrated Moving Averages (ARIMA) model***<br/>
-In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of
-parameters needed for good estimation in the model.<br/>
+:small_orange_diamond: ***Auto-Regressive Integrated Moving Averages (ARIMA) model:*** In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of parameters needed for good estimation in the model.<br/>
 ***ARIMA(p,d,q):***  **$y_{t}  = c + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + b_{1}e_{t-1} + b_{2}e_{t-2} + ... + b_{q}e_{t-q}$**<br/>
 :black_medium_small_square: p: The order of the AR model (i.e., the number of lag observations).<br/> 
 :black_medium_small_square: d: The degree of differencing.<br/>
@@ -70,7 +70,7 @@ parameters needed for good estimation in the model.<br/>
 |*ARIMA (0, 2, 2) with constant*| $y_{t} = C + 2y_{t-1} - y_{t-1} + e_{t} - b_{1}e_{t-1} - b_{2}e_{t-2}$|
 
 
-**Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
+:large_blue_circle: **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
 *The learning process is based on the following steps:*<br/> 
  - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
  - 2. Train a model using this data.<br/>
