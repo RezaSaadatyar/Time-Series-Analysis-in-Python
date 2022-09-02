@@ -43,21 +43,26 @@ These are time-shifted values of the actual demand. For example, lag 1 features 
 :five:**Linear Regression Models**<br/>
     :small_blue_diamond: ***Linear Correlation***<br/>For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.<br/>
     :small_blue_diamond:  ***Linear Regression***<br/> We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. **$y_{t} = a_{0} + x_{t} + e_{t}$**<br/>
-:small_blue_diamond:***Least Squares Method***<br/>By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coff = (X^{T}X)^{-1}X^{T}y$**<br/>
+:small_blue_diamond:***Least Squares Method***<br/>By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coeff = (X^{T}X)^{-1}X^{T}y$**<br/>
 :small_blue_diamond:***Moving Average (MA) Model***<br/>You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/> ***MA(p) model:***  **$y_{t} = a_{0} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{p}e_{t-p}$**   
 :small_blue_diamond: ***Autoregressive (AR) Model***<br/>The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future. <br/>***AR(p) model:*** **$y_{t}  = a_{0} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t}$**<br/> 
 :small_blue_diamond: ***Autoregressive Exogenous (ARX) Model***<br/>The ARX model is a type of autoregressive model that includes an input term, unlike the AR model.<br/>***ARX(p, q) model:***  **$y_{t} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} = b_{1}x_{t} + b_{2}x_{t-1} + ... + b_{p}x_{t-p} + e_{t}$** <br/>
 :small_blue_diamond: ***Auto-Regressive Integrated Moving Averages (ARIMA) model***<br/>
 In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of
 parameters needed for good estimation in the model.<br/>
-***ARIMA(p,d,q):***<br/>
-   - p: The order of the auto-regressive (AR) model (i.e., the number of lag observations). 
-   - d: The degree of differencing.
-   - q: The order of the moving average (MA) model. This is essentially the size of the “window” function over your time series data. 
+***ARIMA(p,d,q):***  **$y_{t}  = c + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{q}e_{t-q}$**<br/>
+:black_medium_small_square: p: The order of the AR model (i.e., the number of lag observations).<br/> 
+:black_medium_small_square: d: The degree of differencing.<br/>
+:black_medium_small_square: q: The order of the MA model. This is essentially the size of the “window” function over your time series data. 
+|Models Name| Model Equation |
+|--|--|
+|*ARIMA (0, 1, 1) = IAM (1, 1) with constant*| $y_{t} = c + a_{1}y_{t-1} + e_{t} + a_{1}e_{t-1}$|
+|*ARIMA (0, 1, 1) = IAM (1, 1)*| $y_{t} = a_{1}y_{t-1} + e_{t} + a_{1}e_{t-1}$|
+|*ARIMA (0, 1, 2) = IAM (1, 1) with constant*| $y_{t} = c + a_{1}y_{t-1} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2}$|
 
 
 
-
+$y_{t}  = c + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{q}e_{t-q}$
 
 
 
