@@ -11,10 +11,10 @@
       - Training the model
       - Prediction and performance check
 
-:arrow_forward:The program will run automatically when you run **code/file Main.py**, and you do not need to run any of the other codes. Depending on your goal, you can execute all steps independently or interdependently within the code/file main. In addition, you can copy and run each section along with its related files in your own code or disable each section with a **#**. To run the program, the only thing you need is your input, which is **data (data = Your data)**.
+:arrow_forward: The program will run automatically when you run **code/file Main.py**, and you do not need to run any of the other codes. Depending on your goal, you can execute all steps independently or interdependently within the code/file main. In addition, you can copy and run each section along with its related files in your own code or disable each section with a **#**. To run the program, the only thing you need is your input, which is **data (data = Your data)**.
 
 ----
-:one:The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of     the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
+:one: The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
 
  **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
 
@@ -22,7 +22,7 @@
 time series values in the future
 
 ---
-:two:Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model.<br/> 
+:two: Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model.<br/> 
 - ***Missing values*** can be filled by interpolating between two closest non-missing values or by using different Python functions (e.g., interpolate()) to fill NAN values in the DataFrame or series. 
 - ***Normalization*** can be useful, and even required in some machine learning algorithms, when your time series data has input values and features with differing measurements and dimensions. For machine learning algorithms, such as *k-nearest neighbors*, which use distance estimates, *linear regression, and neural networks* that process a weight calibration on input values, normalization is necessary. 
 - In ***standardizing*** a data set, the distribution of observed values is rescaled to have a mean of 0 and a standard deviation of 1. Standardization assumes that your observations fit a Gaussian distribution with a well-behaved mean and standard deviation. Algorithms like support vector machines and linear and logistic regression and other algorithms have improved performance with Gaussian data.
@@ -30,11 +30,15 @@ time series values in the future
 ----
 
 
-:three:**Lag feature**
-These are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results. The operation of adding lag features is called the sliding window method or Window Features
+:three: **Lag features**<br/>
+They are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results. The operation of adding lag features is called the sliding window method or Window Features.
+
+***Autocorrelation*** describes the correlation between the output (that is, the target variable that we need to predict) and a specific lagged variable (that is, a group of values at a prior time stamp used as input). ***Autocorrelation plots*** are also often used to check randomness in time series. If the time series is random, autocorrelation values should be near zero for all time lags. If the time series is non-random, then one or more of the autocorrelations will be significantly non-zero.
+
+
 
 ---
-:four:**An explanation of data set splits**
+:four: **An explanation of data set splits**
 - ***Train data set:*** A train data set represents the amount of data that machine learning models are fitted with.
 - ***Validation data set:*** Validation data sets provide an unbiased evaluation of model fit on train data sets while tuning model hyperparameters.
 - ***Test data set:*** A test data set is used to identify whether a model is underfitting (the model performs poorly on the train data set) or overfitting (the model performs well on the train data set but fails to perform well on the test data set). It is determined by looking at the prediction error on both train and test data sets. The test data set is only used after the train and validation data sets have been used to train and validate the model.<br/>
@@ -45,9 +49,9 @@ These are time-shifted values of the actual demand. For example, lag 1 features 
 :orange_circle: **Linear Regression Models:**<br/>
 :small_orange_diamond: ***Linear Correlation:*** For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.
   
-:small_orange_diamond: ***Linear Regression (LR):*** We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. ***LR:*** **$y_{t} = a_{0} + x_{t} + e_{t}$**
+:small_orange_diamond: ***Linear Regression (LR):*** We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. ***LR model:*** **$y_{t} = a_{0} + x_{t} + e_{t}$**
 
-:small_orange_diamond: ***Least Squares Method:*** By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coeff = (X^{T}X)^{-1}X^{T}y$**
+:small_orange_diamond: ***Least Squares Regression (LS):*** By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coeff = (X^{T}X)^{-1}X^{T}y$**
 
 :small_orange_diamond: ***Moving Average (MA) Model:*** You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/> ***MA(p) model:***  **$y_{t} = a_{0} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{p}e_{t-p}$** 
 
@@ -56,13 +60,13 @@ These are time-shifted values of the actual demand. For example, lag 1 features 
 :small_orange_diamond: ***Autoregressive Exogenous (ARX) Model:*** The ARX model is a type of autoregressive model that includes an input term, unlike the AR model.<br/>***ARX(p, q) model:***  **$y_{t} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} = b_{1}x_{t} + b_{2}x_{t-1} + ... + b_{p}x_{t-p} + e_{t}$** 
 
 :small_orange_diamond: ***Auto-Regressive Integrated Moving Averages (ARIMA) model:*** In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of parameters needed for good estimation in the model.<br/>
-***ARIMA(p,d,q):***  **$y_{t}  = c + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + b_{1}e_{t-1} + b_{2}e_{t-2} + ... + b_{q}e_{t-q}$**<br/>
+***ARIMA(p,d,q):***  **$y_{t}  = C + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + b_{1}e_{t-1} + b_{2}e_{t-2} + ... + b_{q}e_{t-q}$**<br/>
 :black_medium_small_square: p: The order of the AR model (i.e., the number of lag observations).<br/> 
 :black_medium_small_square: d: The degree of differencing.<br/>
 :black_medium_small_square: q: The order of the MA model. This is essentially the size of the “window” function over your time series data. 
 |Models Name| Model Equation |
 |--|--|
-|*ARIMA (0, 1, 1) = IAM (1, 1) with constant*| $y_{t} = c + y_{t-1} + e_{t} + b_{1}e_{t-1}$|
+|*ARIMA (0, 1, 1) = IAM (1, 1) with constant*| $y_{t} = C + y_{t-1} + e_{t} + b_{1}e_{t-1}$|
 |*ARIMA (0, 1, 1) = IAM (1, 1)*| $y_{t} = y_{t-1} + e_{t} + b_{1}e_{t-1}$|
 |*ARIMA (0, 1, 2) with constant*| $y_{t} = C + y_{t-1} + e_{t} - a_{1}e_{t-1} - a_{2}e_{t-2}$|
 |*ARIMA (1, 1, 1) with constant*| $y_{t} = C + (1+a_{1})y_{t-1} + a_{1}y_{t-2} + e_{t} - b_{1}e_{t-1}$|
