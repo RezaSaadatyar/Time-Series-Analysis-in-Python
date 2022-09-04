@@ -39,6 +39,8 @@ They are time-shifted values of the actual demand. For example, lag 1 features s
 
 **ACF** is the complete autocorrelation function that gives us the value of the autocorrelation of any series with lagged values. In other words, it describes how well present values are related to its past values. When we plot these values along with a confidence band, we create an ACF plot. A time series consists of several components that include seasonality, trend, cycle, and residuals. The ACF takes all these factors into account while finding correlations, so this is the full auto-correlation plot.
 
+PACF is the partial autocorrelation function. Unlike ACF, PACF finds correlations between residuals (the values that remain after removing the other effects) and the next lag, which we will keep it as a feature in our models. thus, in order to avoid overfitting data for time series models, it is necessary to find optimum features or order of the autoregression process using the PACF plot. The best order is the lag value after which the PACF plot passes the upper confidence band for the first time. These p lags will act as the number of features used to forecast the time series.
+
  ![image](https://user-images.githubusercontent.com/96347878/188177323-4f2fab92-ef86-4bc1-9906-f62e00e4d8c3.png)
  
 ---
