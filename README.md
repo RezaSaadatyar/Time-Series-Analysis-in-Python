@@ -77,43 +77,13 @@ Linear methods like AR, ARX, and ARIMA are popular classical techniques for time
     :black_small_square: Working with univariate time series only, but common real-world problems have multiple input variables.<br/>
     :black_small_square: One-step predictions while many real-world problems require predictions with a long time horizon.<br/>
 
-:black_medium_square: **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
-*The learning process is based on the following steps:*<br/> 
- - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
- - 2. Train a model using this data.<br/>
- - 3. Test and deploy the model.<br/> 
- - 4. Utilize the deployed model to automate predictive tasks.
+:black_medium_square: **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** 
+  - ***Xgboost Regression***
+  - ***Linear Regression***
+  - ***Decision Trees (DT) Regression***
+  - ***Random Forest (RF) Regression***
+  
+  ***The learning process is based on the following steps:***<br/>:black_small_square: Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>:black_small_square: Train a model using this data.<br/>:black_small_square: Test and deploy the model.<br/>:black_small_square: Utilize the deployed model to automate predictive tasks.
 
-
-
-
-
-
-
-
-
- 
-** machine learning for forecasting**
-Multilayer Perceptron (MLP):
-MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
-** Forecasting with machine learning**
-> **Long short-term memory (LSTM):**<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.
->   - LSTM Autoenooder 
->   - Vanilla LSTM<br/> A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.
->   - Stacked LSTM<br/> Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.
->   - Bidirectional LSTM<br/> On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations.
->
-> **LSTM life-cycle in keras:**
-> * 1. Define network
-> * 2. compile network
-> * 3. Fit network
-> * 4. Evaluate network
-> * 5. Make predictions
-
-#### Encoder-Decoder model:
-
-> **Data preprocessing**
-> - Data scaling
-> - Train-test split<br/> We cannot use random way of splitting dataset into train and test as the sequence of events is important for time series. So we take first 70% values for train and the remaining 30% for test.
-> - Create sequences
-> - Build a model
+:black_medium_square: **Deep Learning for Time Series Forecasting:**
+  - ***Long short-term memory (LSTM):***<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.<br/><br/>***There are several types of x, including:***<br/>:black_small_square: *LSTM Autoenooder*<br/>:black_small_square: *Vanilla LSTM:* A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.<br/>:black_small_square: *Stacked LSTM:* Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.<br/>:black_small_square: *Bidirectional LSTM:* On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations.<br/><br/>***LSTM life-cycle in keras:***<br>:black_small_square: Define network.<br/>:black_small_square: compile network.<br/>:black_small_square: Fit network.<br/>:black_small_square: Evaluate network.<br/>:black_small_square: Make predictions
