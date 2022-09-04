@@ -49,35 +49,35 @@ They are time-shifted values of the actual demand. For example, lag 1 features s
 ---
 :five: **Autoregressive and Automated Methods for Time Series Forecasting**
 
-:orange_circle: **Linear Regression Models:**<br/>
-:small_orange_diamond: ***Linear Correlation:*** For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.
-  
-:small_orange_diamond: ***Linear Regression (LR):*** We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. ***LR model:*** **$y_{t} = a_{0} + x_{t} + e_{t}$**
-
-:small_orange_diamond: ***Least Squares Regression (LS):*** By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables. ***LS model:***  **$Coeff = (X^{T}X)^{-1}X^{T}y$**
-
-:small_orange_diamond: ***Moving Average (MA) Model:*** You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/> ***MA(p) model:***  **$y_{t} = a_{0} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{p}e_{t-p}$** 
-
-:small_orange_diamond: ***Autoregressive (AR) Model:*** The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future. <br/>***AR(p) model:*** **$y_{t}  = a_{0} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t}$**
-
-:small_orange_diamond: ***Autoregressive Exogenous (ARX) Model:*** The ARX model is a type of autoregressive model that includes an input term, unlike the AR model.<br/>***ARX(p, q) model:***  **$y_{t} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} = b_{1}x_{t} + b_{2}x_{t-1} + ... + b_{p}x_{t-p} + e_{t}$** 
-
-:small_orange_diamond: ***Auto-Regressive Integrated Moving Averages (ARIMA) model:*** In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of parameters needed for good estimation in the model.<br/>
-***ARIMA(p,d,q):***  **$y_{t}  = C + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + b_{1}e_{t-1} + b_{2}e_{t-2} + ... + b_{q}e_{t-q}$**<br/>
+:black_medium_square: **Linear Regression Models:**<br/>
+  - ***Linear Correlation:*** For two related variables, the correlation measures the association between the two variables. In contrast, a ***linear regression*** is used for the prediction of the value of one variable from another.
+  - ***Linear Regression (LR):*** We can use the method of Linear Regression when we want to predict the value of one variable from the value(s) of one or more other variables. ***LR model:*** **$y_{t} = a_{0} + x_{t} + e_{t}$**
+  - ***Least Squares Regression (LS):*** By minimizing the sum of all offsets or residuals from the plotted curve, the least squares method can be used to identify the best fit for a set of data points. Least squares regression is used for predicting the behavior of dependent variables.<br/> *LS model:*  $Coeff = (X^{T}X)^{-1}X^{T}y$
+  - ***Moving Average (MA) Model:*** You can also forecast a series based solely on the past error values (et). Called short-memory models.<br/> *MA(p) model:* $y_{t} = a_{0} + e_{t} + a_{1}e_{t-1} + a_{2}e_{t-2} + ... + a_{p}e_{t-p}$
+   - ***Autoregressive (AR) Model:*** The AR(p) notation refers to the autoregressive model which uses p history lag to predict the future. <br/>*AR(p) model:* $y_{t}  = a_{0} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t}$
+   - ***Autoregressive Exogenous (ARX) Model:*** The ARX model is a type of autoregressive model that includes an input term, unlike the AR model.<br/>*ARX(p, q) model:*  $y_{t} + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} = b_{1}x_{t} + b_{2}x_{t-1} + ... + b_{p}x_{t-p} + e_{t}$
+   - ***Auto-Regressive Integrated Moving Averages (ARIMA) model:*** In statistics and in time series analysis, an ARIMA model is an update of ARMA (autoregressive moving average). The ARMA consists of mainly two components, the autoregressive and moving average; the ARIMA consists of an integrated moving average of autoregressive time series. ARIMA is used to help reduce the number of parameters needed for good estimation in the model.<br/>
+*ARIMA(p,d,q):*  $y_{t}  = C + a_{1}y_{t-1} + a_{2}y_{t-2} + ... + a_{p}y_{t-p} + e_{t} + b_{1}e_{t-1} + b_{2}e_{t-2} + ... + b_{q}e_{t-q}$<br/>
 :black_medium_small_square: p: The order of the AR model (i.e., the number of lag observations).<br/> 
 :black_medium_small_square: d: The degree of differencing.<br/>
-:black_medium_small_square: q: The order of the MA model. This is essentially the size of the “window” function over your time series data. 
-|Models Name| Model Equation |
-|--|--|
-|*ARIMA (0, 1, 1) = IAM (1, 1) with constant*| $y_{t} = C + y_{t-1} + e_{t} + b_{1}e_{t-1}$|
-|*ARIMA (0, 1, 1) = IAM (1, 1)*| $y_{t} = y_{t-1} + e_{t} + b_{1}e_{t-1}$|
-|*ARIMA (0, 1, 2) with constant*| $y_{t} = C + y_{t-1} + e_{t} - a_{1}e_{t-1} - a_{2}e_{t-2}$|
-|*ARIMA (1, 1, 1) with constant*| $y_{t} = C + (1+a_{1})y_{t-1} + a_{1}y_{t-2} + e_{t} - b_{1}e_{t-1}$|
-|*ARIMA (1, 1, 1)*| $y_{t} = (1+a_{1})y_{t-1} + a_{1}y_{t-2} + e_{t} - b_{1}e_{t-1}$|
-|*ARIMA (0, 2, 2) with constant*| $y_{t} = C + 2y_{t-1} - y_{t-1} + e_{t} - b_{1}e_{t-1} - b_{2}e_{t-2}$|
+:black_medium_small_square: q: The order of the MA model. This is essentially the size of the “window” function over your time series data.
 
+     |Models Name| Model Equation |
+     |--|--|
+     |*ARIMA (0, 1, 1) = IAM (1, 1) with constant*| $y_{t} = C + y_{t-1} + e_{t} + b_{1}e_{t-1}$|
+     |*ARIMA (0, 1, 1) = IAM (1, 1)*| $y_{t} = y_{t-1} + e_{t} + b_{1}e_{t-1}$|
+     |*ARIMA (0, 1, 2) with constant*| $y_{t} = C + y_{t-1} + e_{t} - a_{1}e_{t-1} - a_{2}e_{t-2}$|
+     |*ARIMA (1, 1, 1) with constant*| $y_{t} = C + (1+a_{1})y_{t-1} + a_{1}y_{t-2} + e_{t} - b_{1}e_{t-1}$|
+     |*ARIMA (1, 1, 1)*| $y_{t} = (1+a_{1})y_{t-1} + a_{1}y_{t-2} + e_{t} - b_{1}e_{t-1}$|
+     |*ARIMA (0, 2, 2) with constant*| $y_{t} = C + 2y_{t-1} - y_{t-1} + e_{t} - b_{1}e_{t-1} - b_{2}e_{t-2}$|
+Linear methods like AR, ARX, and ARIMA are popular classical techniques for time series forecasting. But these traditional approaches also have some constraints:<br/>
+    :black_small_square: Focus on linear relationships and inability to find complex nonlinear ones.<br/>
+    :black_small_square: Fixed lag observations and incapacity to make feature pre-processing.<br/>
+    :black_small_square: Missing data & noise are not supported.<br/>
+    :black_small_square: Working with univariate time series only, but common real-world problems have multiple input variables.<br/>
+    :black_small_square: One-step predictions while many real-world problems require predictions with a long time horizon.<br/>
 
-:large_blue_circle: **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
+:black_medium_square: **Machine Learning for Time Series Forecasting: [Further information](https://github.com/RezaSaadatyar/Machine-Learning-in-Python)** <br/> 
 *The learning process is based on the following steps:*<br/> 
  - 1. Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>
  - 2. Train a model using this data.<br/>
@@ -89,57 +89,10 @@ They are time-shifted values of the actual demand. For example, lag 1 features s
 
 
 
-> 
-> **Introduction to Autoregressive and Automated Methods for Time Series Forecasting:**
-> 
-> - Seasonal autoregressive integrated moving average (SARIMA) moddel
-     - is an extension of the ARIMA model that also includes the impact of seasonality. It combines the ARIMA model with the seasonally adjusted predictions.
-> - Holt-Winters exponential smoothing (HWES):
-   - HWES is a way to model three aspects of the time series: an average of a typical value, a trend, and a seasonality. HWES uses exponential smoothing to remember lots of data from the past and predict future values. So this method is suitable for time series with trend and seasonal components.
-
-An MA process is a linear combination of past errors
-- Moving Average 
-- Autoregressive Moving Average 
-- Autoregressive Integrated Moving Average
-
-Linear methods like ARIMA, SARIMA, HWES are popular classical techniques for time series forecasting. But these traditional approaches also have some constraints:
- - Focus on linear relationships and inability to find complex nonlinear ones
-Fixed lag observations and incapacity to make feature pre-processing
-Missing data are not supported
-Working with univariate time series only, but common real-world problems have multiple input variables
-One-step predictions: many real-world problems require predictions with a long time horizon
 
 
 
-```diff 
-ARMA(p,q) model:
-* p is order of AR part
-* q is order of MA part
-* ARMA(1,1): Yt = a1yt-1 + b1et-1 + et
-Example: 
-yt = 0.5yt-1 + 0.2et-1 + et
-* ar_coefs = [1, -0.5]
-* ma_coefs = [1, 0.2]
-
-```
-> **Problems of traditional regression based forecasting models:**<br/>
-> Do not support<br/>
-> * 1. noise, missing data or outliers.
-> * 2. non-linear relationship.
-> * 3. multiple fileds to influnce the predictions.
-
-> ***Holt Winter Multiplicative method***
->  **$y_{t-1} = (L_t + b_t) * S_{t+1-m}$**
-> Auto-correlation: 
->   * The ACF can be used to identify trends in data and the influence of previously observed values on a current observation Sharp peaks
- indicate a sharp correlation in time series, whereas shorter peaks indicate little correlation in the time series.
->   * lag: We can calculate the correlation for current time-series observations with observations of previous time steps called lags and
- after lag q, the auto-correlation is not significant anymore. In other words, instead of calculating the correlation between two different
- series, we calculate the correlation of the series with an “x” unit lagged version (x∈N) of itself. It is also known as lagged correlation
- or serial correlation. The value of auto-correlation varies between +1 & -1. If the auto-correlation of series is a very small value that
- does not mean, there is no correlation.
- >  * PACF: We can find out the required number of AR terms by inspecting the Partial Autocoreelation plot. The PACF represents the correlation
- between the series and its lags. 
+ 
 ** machine learning for forecasting**
 Multilayer Perceptron (MLP):
 MLP is a deep, artificial neural network connected to mutltiple layers in a directed graph.
