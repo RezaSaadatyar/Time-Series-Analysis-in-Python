@@ -93,3 +93,44 @@ Linear methods like AR, ARX, and ARIMA are popular classical techniques for time
  
  ---
  **The five steps to effective time series forecasting are as follows:**
+```
+# ============================================= Import Libraries ========================================
+import os
+import numpy as np
+import pandas as pd
+from ARX_Model import arx
+import statsmodels.api as sm
+from AR_Model import ar_model
+import matplotlib.pyplot as plt
+from ARIMA_Model import arima_model
+from Plot_Models import plot_models
+from Least_Squares import lest_squares
+from Normalize_Data import normalize_data
+from Sequences_Data import sequences_data
+from Test_Stationary import test_stationary
+from Auto_Correlation import auto_correlation
+from Linear_Regression import linear_regression
+from Xgboost_Regression import xgboost_regression
+from keras import models, layers, optimizers, utils
+from Random_Forest_Regression import random_forest_regression
+from Tree_Decision_Regression import tree_decision_regression
+```
+***Step 1:***
+```
+# ======================================== Step 1: Load Data ==================================================
+os.system('cls')
+data = sm.datasets.sunspots.load_pandas()  # df = pd.read_csv('monthly_milk_production.csv'), df.info(), X = df["Value"].values
+data = data.data["SUNACTIVITY"]
+# print('Shape of data \t', data.shape)
+# print('Original Dataset:\n', data.head())
+# print('Values:\n', data)
+```
+***Step 2:***
+```
+# ================================ Step 2: Normalize Data (0-1) ================================================
+data, normalize = normalize_data(data, Type_Normalize='MinMaxScaler', Display_Figure='on')  # Type_Normalize: 'MinMaxScaler', 'normalize',
+```
+![Normalize_data](https://user-images.githubusercontent.com/96347878/188679304-9ad61a53-9f8d-44a4-94b3-b5cbe2e6c2af.png)
+
+
+
