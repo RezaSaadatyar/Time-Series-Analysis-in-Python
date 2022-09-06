@@ -136,5 +136,5 @@ data, normalize = normalize_data(data, Type_Normalize='MinMaxScaler', Display_Fi
 # ================================ Step 3: Check Stationary Time Series ========================================
 data = test_stationary(data, window=20)
 ```
-![Check Stationary Time Series](https://user-images.githubusercontent.com/96347878/188679666-e510a604-abc5-4bc1-a313-df71be47baa6.png)
+![Check Stationary Time Series](https://user-images.githubusercontent.com/96347878/188680819-9b1ac97e-086d-42b6-89af-e835492c0086.png)
 
