@@ -127,14 +127,20 @@ data = data.data["SUNACTIVITY"]
 ```
 ***Step 2:***
 ```
-# ================================ Step 2: Normalize Data (0-1) ================================================
+# ================================ Step 2.1: Normalize Data (0-1) ================================================
 data, normalize = normalize_data(data, Type_Normalize='MinMaxScaler', Display_Figure='on')  # Type_Normalize: 'MinMaxScaler', 'normalize',
 ```
 ![Normalize_data](https://user-images.githubusercontent.com/96347878/188679304-9ad61a53-9f8d-44a4-94b3-b5cbe2e6c2af.png)
-***Step 3:***
+
 ```
-# ================================ Step 3: Check Stationary Time Series ========================================
+# ================================ Step 2.2: Check Stationary Time Series ========================================
 data = test_stationary(data, window=20)
 ```
 ![Check Stationary Time Series](https://user-images.githubusercontent.com/96347878/188680819-9b1ac97e-086d-42b6-89af-e835492c0086.png)
 
+***Step 3***:
+```
+# ==================================== Step 3: Find the lags of AR and etc models ==============================
+auto_correlation(data, nLags=10)
+```
+![Find the lags of AR and etc models](https://user-images.githubusercontent.com/96347878/188682420-b9bf0369-9c31-4b19-a29d-3fdf2cfd113d.png)
