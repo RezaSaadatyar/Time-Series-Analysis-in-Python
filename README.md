@@ -174,13 +174,13 @@ arima_model(data, train_size, axs, order=(5, 1, (1, 1, 1, 1)), seasonal_order=(0
 # ======================================= Step 5: Machine Learning Models ======================================
 # ------------------------------------------- Linear Regression Model  -----------------------------------------
 linear_regression(data, Data_Lags, train_size, axs, num_sample=50)
-# ------------------------------------------ RandomForestRegressor Model ----------------------------------------
+# ------------------------------------------ RandomForestRegressor Model ---------------------------------------
 random_forest_regression(data, Data_Lags, train_size, axs, n_estimators=100, max_features=nLags, num_sample=50)
-# -------------------------------------------- Decision Tree Model ----------------------------------------------
+# -------------------------------------------- Decision Tree Model ---------------------------------------------
 tree_decision_regression(data, Data_Lags, train_size, axs, max_depth=2, num_sample=50)
-# ---------------------------------------------- xgboost --------------------------------------------------------
+# ---------------------------------------------- xgboost -------------------------------------------------------
 xgboost_regression(data, Data_Lags, train_size, axs, n_estimators=1000, num_sample=50)
-# ----------------------------------------- Step 5: LSTM model --------------------------------------------------
+# -----------------------------------------------  LSTM model --------------------------------------------------
 train_x, train_y = sequences_data(np.array(data[:train_size]), nLags)  # Convert to a time series dimension:[samples, nLags, n_features]
 test_x, test_y = sequences_data(np.array(data[train_size:]), nLags)
 mod = models.Sequential()  # Build the model
