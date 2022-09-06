@@ -144,3 +144,62 @@ data = test_stationary(data, window=20)
 auto_correlation(data, nLags=10)
 ```
 ![Find the lags of AR and etc models](https://user-images.githubusercontent.com/96347878/188682420-b9bf0369-9c31-4b19-a29d-3fdf2cfd113d.png)
+**Step 4:***
+```
+# =========================== Step 4: Split Dataset intro Train and Test =======================================
+nLags = 3
+Data_Lags = pd.DataFrame(np.zeros((len(data), nLags)))
+for i in range(0, nLags):
+    Data_Lags[i] = data.shift(i + 1)
+Data_Lags = Data_Lags[nLags:]
+data = data[nLags:]
+Data_Lags.index = np.arange(0, len(Data_Lags), 1, dtype=int)
+data.index = np.arange(0, len(data), 1, dtype=int)
+train_size = int(len(data) * 0.8)
+```
+***Step 5:***
+```
+# ================================= Step 5: Autoregressive and Automated Methods ===============================
+sns.set(style='white')
+fig, axs = plt.subplots(nrows=4, ncols=1, sharey='row', figsize=(16, 10))
+plot_models(data, [], [], axs, nLags, train_size, num_sample=50, type_model='Actual_Data')
+# -------------------------------------------  Least Squares ---------------------------------------------------
+lest_squares(data, Data_Lags, train_size, axs, num_sample=50)
+# -------------------------------------------- Auto-Regressive (AR) model --------------------------------------
+ar_model(data, train_size, axs, n_lags=nLags, num_sample=50)
+# ------------------------------------------------  ARX --------------------------------------------------------
+arx(data, Data_Lags, train_size, axs, mu=0.9, num_sample=50)
+# ----------------------------- Auto-Regressive Integrated Moving Averages (ARIMA) -----------------------------
+arima_model(data, train_size, axs, order=(5, 1, (1, 1, 1, 1)), seasonal_order=(0, 0, 2, 12), num_sample=50)
+# ======================================= Step 5: Machine Learning Models ======================================
+# ------------------------------------------- Linear Regression Model  -----------------------------------------
+linear_regression(data, Data_Lags, train_size, axs, num_sample=50)
+# ------------------------------------------ RandomForestRegressor Model ----------------------------------------
+random_forest_regression(data, Data_Lags, train_size, axs, n_estimators=100, max_features=nLags, num_sample=50)
+# -------------------------------------------- Decision Tree Model ----------------------------------------------
+tree_decision_regression(data, Data_Lags, train_size, axs, max_depth=2, num_sample=50)
+# ---------------------------------------------- xgboost --------------------------------------------------------
+xgboost_regression(data, Data_Lags, train_size, axs, n_estimators=1000, num_sample=50)
+# ----------------------------------------- Step 5: LSTM model --------------------------------------------------
+train_x, train_y = sequences_data(np.array(data[:train_size]), nLags)  # Convert to a time series dimension:[samples, nLags, n_features]
+test_x, test_y = sequences_data(np.array(data[train_size:]), nLags)
+mod = models.Sequential()  # Build the model
+# mod.add(layers.ConvLSTM2D(filters=64, kernel_size=(1, 1), activation='relu', input_shape=(None, nLags)))  # ConvLSTM2D
+# mod.add(layers.Flatten())
+mod.add(layers.LSTM(units=100, activation='tanh', input_shape=(None, nLags)))
+mod.add(layers.Dropout(rate=0.2))
+# mod.add(layers.LSTM(units=100, activation='tanh'))  # Stacked LSTM
+# mod.add(layers.Bidirectional(layers.LSTM(units=100, activation='tanh'), input_shape=(None, 1)))     # Bidirectional LSTM: forward and backward
+mod.add(layers.Dense(32))
+mod.add(layers.Dense(1))   # A Dense layer of 1 node is added in order to predict the label(Prediction of the next value)
+mod.compile(optimizer='adam', loss='mse')
+mod.fit(train_x, train_y, validation_data=(test_x, test_y), verbose=2, epochs=100)
+y_train_pred = pd.Series(mod.predict(train_x).ravel())
+y_test_pred = pd.Series(mod.predict(test_x).ravel())
+y_train_pred.index = np.arange(nLags, len(y_train_pred)+nLags, 1, dtype=int)
+y_test_pred.index = np.arange(train_size + nLags, len(data), 1, dtype=int)
+plot_models(data, y_train_pred, y_test_pred, axs, nLags, train_size, num_sample=50, type_model='LSTM')
+# data_train = normalize.inverse_transform((np.array(data_train)).reshape(-1, 1))
+mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=15), plt.show()
+```
+![Autoregressive and Automated Methods](https://user-images.githubusercontent.com/96347878/188715358-252f5f1c-ee91-4003-ae82-0403d41fc001.png)
