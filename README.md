@@ -1,4 +1,4 @@
-### $$\textcolor{blue}{\text{Time Series Analysis and Forecasting}}$$
+**Time Series Analysis and Forecasting**
 
 ***This repository Covers:***
 - 1. A brief about Time series
