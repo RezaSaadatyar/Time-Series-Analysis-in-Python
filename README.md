@@ -205,7 +205,7 @@ mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=1
 ```
 ![Autoregressive and Automated Methods](https://user-images.githubusercontent.com/96347878/188715358-252f5f1c-ee91-4003-ae82-0403d41fc001.png)
 
-> <table>
+<table>
  <tr><th>Training </th><th>Test</th></tr>
 <tr><td>
  
