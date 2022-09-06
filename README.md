@@ -131,6 +131,10 @@ data = data.data["SUNACTIVITY"]
 data, normalize = normalize_data(data, Type_Normalize='MinMaxScaler', Display_Figure='on')  # Type_Normalize: 'MinMaxScaler', 'normalize',
 ```
 ![Normalize_data](https://user-images.githubusercontent.com/96347878/188679304-9ad61a53-9f8d-44a4-94b3-b5cbe2e6c2af.png)
-
-
+***Step 3:***
+```
+# ================================ Step 3: Check Stationary Time Series ========================================
+data = test_stationary(data, window=20)
+```
+![Check Stationary Time Series](https://user-images.githubusercontent.com/96347878/188679666-e510a604-abc5-4bc1-a313-df71be47baa6.png)
 
