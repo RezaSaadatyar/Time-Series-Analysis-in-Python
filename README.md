@@ -144,6 +144,7 @@ data = test_stationary(data, window=20)
 auto_correlation(data, nLags=10)
 ```
 ![Find the lags of AR and etc models](https://user-images.githubusercontent.com/96347878/188682420-b9bf0369-9c31-4b19-a29d-3fdf2cfd113d.png)
+
 **Step 4:***
 ```
 # =========================== Step 4: Split Dataset intro Train and Test =======================================
@@ -203,3 +204,36 @@ plot_models(data, y_train_pred, y_test_pred, axs, nLags, train_size, num_sample=
 mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=15), plt.show()
 ```
 ![Autoregressive and Automated Methods](https://user-images.githubusercontent.com/96347878/188715358-252f5f1c-ee91-4003-ae82-0403d41fc001.png)
+
+> <table>
+ <tr><th>Training </th><th>Test</th></tr>
+<tr><td>
+ 
+| Method | $${R^2}$$|
+| ------ | ----- |
+|LS  | 0.83 |  0.87 |
+|AR  | 0.83 |  0.21 | 
+|ARX | 0.0.95 |0.99 |   
+|ARIMA| 0.84 | 0.25 | 
+|LR| 0.83 | 0.87 |    
+|DT | 0.67 | 0.56 |   
+|RF | 0.97 | 0.84 | 
+|XGBoost | 1 | 0.83 | 
+|LSTM | 0.86 | 0.89 |
+ 
+</td><td>
+
+ $${R^2}$$|
+| ----- |
+|  0.87 |
+|  0.21 | 
+|0.99 |   
+| 0.25 | 
+| 0.87 |    
+| 0.56 |   
+| 0.84 | 
+| 0.83 | 
+| 0.89 |
+
+</td></tr> </table>
+
