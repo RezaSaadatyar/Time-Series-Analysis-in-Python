@@ -213,7 +213,7 @@ mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=1
 | ------ | ----- |
 |LS  | 0.83 |  0.87 |
 |AR  | 0.83 |  0.21 | 
-|ARX | 0.0.95 |0.99 |   
+|ARX | 0.0.95 |***0.99*** |   
 |ARIMA| 0.84 | 0.25 | 
 |LR| 0.83 | 0.87 |    
 |DT | 0.67 | 0.56 |   
@@ -233,7 +233,7 @@ mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=1
 | 0.56 |   
 | 0.84 | 
 | 0.83 | 
-| 0.89 |
+| ***0.89*** |
 
 </td></tr> </table>
 
