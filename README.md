@@ -145,7 +145,7 @@ auto_correlation(data, nLags=10)
 ```
 ![Find the lags of AR and etc models](https://user-images.githubusercontent.com/96347878/188682420-b9bf0369-9c31-4b19-a29d-3fdf2cfd113d.png)
 
-**Step 4:***
+***Step 4:***
 ```
 # =========================== Step 4: Split Dataset intro Train and Test =======================================
 nLags = 3
@@ -213,7 +213,7 @@ mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=1
 | ------ | ----- |
 |LS  | 0.83 |  0.87 |
 |AR  | 0.83 |  0.21 | 
-|ARX | 0.0.95 |***0.99*** |   
+|ARX | 0.0.95 | ***0.99***|   
 |ARIMA| 0.84 | 0.25 | 
 |LR| 0.83 | 0.87 |    
 |DT | 0.67 | 0.56 |   
