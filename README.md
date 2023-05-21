@@ -236,4 +236,4 @@ mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=1
 
 </td></tr> </table>
 
-Reza.Saadatyar92@gmail.com
+***Email:*** Reza.Saadatyar92@gmail.com
