@@ -1,13 +1,13 @@
 **Time Series Analysis and Forecasting**
 
 ***This repository Covers:***
-- 1. A brief about Time series
+- 1. A brief about the Time series
 - 2. Preparing the data
      - Normalize data (0-1)
      - Check stationary time series (p < 0.005)
 - 3. Find the lags
-- 4. Split dataset intro train and test
-- 5. Types of regression algorithms
+- 4. Split dataset into train and test
+- 5. Types of Regression Algorithms
       - Training the model
       - Prediction and performance check
 
@@ -16,26 +16,26 @@
 ----
 :one: The term time series refers to a series of observations that depend on time. Time is an essential feature in natural processes such as air temperature, a pulse of the heart, or stock price changes. Analyzing time series and forecasting time series are two different things.
 
- **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trend, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to prepare and analyze time series dataset for time series forecasting
+ **Time series analysis:** As a result of time series analysis, we can extract useful information from time series data: trends, cyclic and seasonal deviations, correlations, etc. Time series analysis is the first step to preparing and analyzing time series datasets for time series forecasting
 
- **Time series forecasting** includes: Developing models and Using them to forecast future predictions.Time series forecasting tries to find the most likely
-time series values in the future
+ **Time series forecasting** includes: Developing models and Using them to forecast future predictions. Time series forecasting tries to find the most likely
+time-series values in the future
 
 ---
 :two: Data pre-processing is the step where clean data sets from outliers and missing data and create additional features with the raw data to feed the model.<br/> 
 - ***Missing values*** can be filled by interpolating between two closest non-missing values or by using different Python functions (e.g., interpolate()) to fill NAN values in the DataFrame or series. 
 - ***Normalization*** can be useful, and even required in some machine learning algorithms, when your time series data has input values and features with differing measurements and dimensions. For machine learning algorithms, such as *k-nearest neighbors*, which use distance estimates, *linear regression, and neural networks* that process a weight calibration on input values, normalization is necessary. 
-- In ***standardizing*** a data set, the distribution of observed values is rescaled to have a mean of 0 and a standard deviation of 1. Standardization assumes that your observations fit a Gaussian distribution with a well-behaved mean and standard deviation. Algorithms like support vector machines and linear and logistic regression and other algorithms have improved performance with Gaussian data.
-- ***Check Stationary Time Series:*** Mean, and variance is constant over periods, and auto-covariance does not depend on time. Plot the moving average/variance (Rolling window statistics) and see if it varies with time. Augmented Dickey-Fuller Test: When the test statistic (p-value) is lower than the critical value shown, the time series is stationary.
+- In ***standardizing*** a data set, the distribution of observed values is rescaled to have a mean of 0 and a standard deviation of 1. Standardization assumes that your observations fit a Gaussian distribution with a well-behaved mean and standard deviation. Algorithms like support vector machines linear and logistic regression and other algorithms have improved performance with Gaussian data.
+- ***Check Stationary Time Series:*** Mean, and variance are constant over periods, and auto-covariance does not depend on time. Plot the moving average/variance (Rolling window statistics) and see if it varies with time. Augmented Dickey-Fuller Test: When the test statistic (p-value) is lower than the critical value shown, the time series is stationary.
 ----
 
 :three: **Lag features**<br/>
-They are time-shifted values of the actual demand. For example, lag 1 features store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results. The operation of adding lag features is called the sliding window method or Window Features.
+They are time-shifted values of the actual demand. For example, lag 1 feature store the demand of the previous hour/sample relative to the current time stamp. Similarly, we can add lag 2, lag 3, and so on. A combination of lag features is selected during the modeling phase based on the evaluation of the model results. The operation of adding lag features is called the sliding window method or Window Features.
 
 ***Autocorrelation*** describes the correlation between the output (that is, the target variable that we need to predict) and a specific lagged variable (that is, a group of values at a prior time stamp used as input). ***Autocorrelation plot*** is also often used to check randomness in time series. If the time series is random, autocorrelation values should be near zero for all time lags. If the time series is non-random, then one or more of the autocorrelations will be significantly non-zero. The purpose of *the autocorrelation plot* is to show whether the data points in a time series are positively correlated, negatively correlated, or independent of one another. A plot of the autocorrelation of a time series by lag is also called the ***autocorrelation function (ACF)***.<br/>
 **ACF** is an autocorrelation function that provides information about the amount of autocorrelation in a series with its lagged values. In other words, it describes how well present values are related to its past values. A time series consists of several components that include seasonality, trend, cycle, and residuals. The ACF takes all these factors into account while finding correlations, so this is the full auto-correlation plot.
 
-**PACF** is the partial autocorrelation function. Unlike ACF, PACF finds correlations between residuals (the values that remain after removing the other effects) and the next lag, which we will keep it as a feature in our models. thus, in order to avoid *overfitting* data for time series models, it is necessary to find optimum features or order of the autoregression process using the PACF plot. The best order is the lag value after which the PACF plot passes the upper confidence band for the first time. These p lags will act as the number of features used to forecast the time series. In the figure below,  lags up to six have a good correlation before the plot first cuts the upper confidence interval. By combining the first six lags, we can model the given autoregression process.
+**PACF** is the partial autocorrelation function. Unlike ACF, PACF finds correlations between residuals (the values that remain after removing the other effects) and the subsequent lag, which we will keep it as a feature in our models. thus, in order to avoid *overfitting* data for time series models, it is necessary to find optimum features or order of the autoregression process using the PACF plot. The best order is the lag value after which the PACF plot passes the upper confidence band for the first time. These p lags will act as the number of features used to forecast the time series. In the figure below,  lags up to six have a reasonable correlation before the plot first cuts the upper confidence interval. By combining the first six lags, we can model the given autoregression process.
 
  ![image](https://user-images.githubusercontent.com/96347878/188177323-4f2fab92-ef86-4bc1-9906-f62e00e4d8c3.png)
  
@@ -85,7 +85,7 @@ Linear methods like AR, ARX, and ARIMA are popular classical techniques for time
   ***The learning process is based on the following steps:***<br/>:black_small_square: Algorithms are fed data. (In this step you can provide additional information to the model, for example, by performing feature extraction).<br/>:black_small_square: Train a model using this data.<br/>:black_small_square: Test and deploy the model.<br/>:black_small_square: Utilize the deployed model to automate predictive tasks.
 
 :black_medium_square: **Deep Learning for Time Series Forecasting:**
-  - ***Long short-term memory (LSTM):***<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale th data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preproessing class from the scikit-learn library.<br/><br/>***There are several types of x, including:***<br/>:black_small_square: *LSTM Autoenooder*<br/>:black_small_square: *Vanilla LSTM:* A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.<br/>:black_small_square: *Stacked LSTM:* Multiple hidden LSTM layers can be stacked one on top of another in what is refeered to as a stacked LSTM model.<br/>:black_small_square: *Bidirectional LSTM:* On some sequence prediction problem, it can be benenficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations.<br/><br/>***LSTM life-cycle in keras:***<br>:black_small_square: Define network.<br/>:black_small_square: compile network.<br/>:black_small_square: Fit network.<br/>:black_small_square: Evaluate network.<br/>:black_small_square: Make predictions
+  - ***Long short-term memory (LSTM):***<br/> LSTM is an artificial recurrent neural network (RNN) architecture used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. LSTMs are sensitive to the scale of the input data, specifically when the sigmoid (default) or tanh activation functions are used. It can be a good practice to rescale the data to the range of 0 to 1, also called normalizing. We can easily normalize the dataset using the MinMaxscaler preprocessing class from the scikit-learn library.<br/><br/>***There are several types of x, including:***<br/>:black_small_square: *LSTM Autoenooder*<br/>:black_small_square: *Vanilla LSTM:* A Vanilla LSTM is an LSTM model that has a single hidden layer of LSTM units, and an output layer used to make a prediction.<br/>:black_small_square: *Stacked LSTM:* Multiple hidden LSTM layers can be stacked one on top of another in what is referred to as a stacked LSTM model.<br/>:black_small_square: *Bidirectional LSTM:* On some sequence prediction problem, it can be beneficial to allow the LSTM model to learn the input sequence both forward, backward and concatenate both interpretations.<br/><br/>***LSTM life-cycle in keras:***<br>:black_small_square: Define network.<br/>:black_small_square: compile network.<br/>:black_small_square: Fit network.<br/>:black_small_square: Evaluate network.<br/>:black_small_square: Make predictions
   
  ----
  **Install the required packages (if required)**<br/>:black_small_square: pip install numpy<br/>:black_small_square: pip install scipy<br/>:black_small_square: pip install pandas<br/>:black_small_square: pip install seaborn<br/>:black_small_square: pip install matplotlib<br/>:black_small_square: pip install scikit-learn<br/>:black_small_square: pip install keras
@@ -212,7 +212,7 @@ mod.summary(), plt.tight_layout(),plt.xticks(fontsize=15), plt.yticks(fontsize=1
 | ------ | ----- |
 |LS  | 0.83 |  0.87 |
 |AR  | 0.83 |  0.21 | 
-|ARX | 0.0.95 | ***0.99***|   
+|ARX | 0.95 | ***0.99***|   
 |ARIMA| 0.84 | 0.25 | 
 |LR| 0.83 | 0.87 |    
 |DT | 0.67 | 0.56 |   
