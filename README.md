@@ -1,6 +1,5 @@
 **Time Series Analysis and Forecasting**
 
-
 ***This repository Covers:***
 - 1. A brief about the Time series
 - 2. Preparing the data
